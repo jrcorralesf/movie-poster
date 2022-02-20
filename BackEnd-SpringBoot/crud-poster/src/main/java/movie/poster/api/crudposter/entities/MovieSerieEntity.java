@@ -12,7 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -37,9 +37,9 @@ public class MovieSerieEntity extends AuditEntity{
     @Size(max = 500, message = "the max length  is 500")
     private String imageUrl;
 
-    @Column(name = "rate_value", columnDefinition = "Decimal(1,1)")
+    @Column(name = "rate_value", columnDefinition = "Decimal(2,1)")
     private double rate;
 
     @Column(name = "release_date")
-    private LocalDateTime releaseDate;
+        private LocalDate releaseDate;
 }
